@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
+    <!-- 使用預設值得base.xml -->
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
+    <!-- 只要大於等於debug等級，就記錄下來 -->
     <logger name="org.springframework.web" level="DEBUG"/>
 </configuration>
  
