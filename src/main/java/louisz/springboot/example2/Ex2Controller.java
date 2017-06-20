@@ -14,19 +14,19 @@ public class Ex2Controller {
 	 //log level 設定為debug
 	@RequestMapping("/log_debug")
     public String debug() {
-		logger.debug("This is debug msg.");		
+		logger.debug("This is debug msg. OK!!!");		
         return "debug level";
     } 
 	 //log level 設定為info
 	@RequestMapping("/log_info")
     public String info() {
-		logger.info("This is info msg.");		
+		logger.info("This is info msg. OK!!!");		
         return "info level";
     } 
 	 //log level 設定為error
 	@RequestMapping("/log_error")
     public String error() {
-		logger.debug("This is error msg.");		
+		logger.debug("This is error msg. OK!!!");		
         return "error level";
     } 
 	
