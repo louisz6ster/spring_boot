@@ -4,7 +4,7 @@ public class User {
 	private Long id;
 	private String name;
 	private String email;
-	private Integer mobileNumber;
+	private String mobileNumber;
 	public Long getId() {
 		return id;
 	}
@@ -23,12 +23,13 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public Integer getMobileNumber() {
+	public String getMobileNumber() {
 		return mobileNumber;
 	}
-	public void setMobileNumber(Integer mobileNumber) {
+	public void setMobileNumber(String mobileNumber) {
 		this.mobileNumber = mobileNumber;
 	}
+
 	
 	
 }

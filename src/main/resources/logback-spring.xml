@@ -53,12 +53,12 @@
         <appender-ref ref="RollingFile-Appender" />
     </appender>
  	<!-- 紀錄套用package、level等 -->
-    <logger name="louisz.springboot.example2"  level="debug" additivity="false">
+    <logger name="louisz.springboot.example2"  level="info" additivity="false">
         <appender-ref ref="Console-Appender" />
         <appender-ref ref="File-Appender" />
         <appender-ref ref="Async-Appender" />
     </logger>
-    <root>
+    <root level="info">
         <appender-ref ref="Console-Appender" />
     </root>
 </configuration>
