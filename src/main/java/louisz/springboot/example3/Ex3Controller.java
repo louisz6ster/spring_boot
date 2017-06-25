@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(value = "/users") // 上層路徑配置
+@RequestMapping(value = "/user") // 上層路徑配置
 public class Ex3Controller {
-	// TODO 待確認是不只有一的物件
+	//單一儲存庫
 	static Map<Long, User> users = Collections.synchronizedMap(new HashMap<Long, User>());
 
 	/**
@@ -38,9 +38,9 @@ public class Ex3Controller {
 	 */
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
 	public String addUser(@ModelAttribute User user) {
-		// TODO ModelAttribute待確認，另外傳入Input JSON會自動轉換為User物件
+		// 傳入Input JSON會自動轉換為User物件
 		users.put(user.getId(), user);
-		return "success";
+		return "add success";
 	}
 
 	/**
@@ -51,11 +51,10 @@ public class Ex3Controller {
 	 */
 	@RequestMapping(value = "/find/{id}", method = RequestMethod.POST)
 	public User findUser(@PathVariable Long id) {
-		// TODO PathVariable待確認，Output User會自動轉換為JSON物件
+		// Output User會自動轉換為JSON物件
 		return users.get(id);
 	}
 
-	// TODO 這裡待討論的是RESTful要確認一下作業功能
 	/**
 	 * 傳入id及JSON User進行資料更新
 	 * 
@@ -67,11 +66,11 @@ public class Ex3Controller {
 	public String updateUser(@PathVariable Long id, @ModelAttribute User user) {
 		// 更新User資料
 		User u = users.get(id);
-		System.out.println(u.getName()+"=>"+user.getMobileNumber());
+//		System.out.println(u.getName()+"=>"+user.getMobileNumber());
 		// 使用了BeanUtils
 		BeanUtils.copyProperties(user, u);
 		users.put(id, u);
-		return "success";
+		return "update success";
 	}
 
 	/**
@@ -82,8 +81,9 @@ public class Ex3Controller {
 	 */
 	@RequestMapping(value = "/remove/{id}", method = RequestMethod.DELETE)
 	public String removeUser(@PathVariable Long id) {
+		//刪除user資料
 		users.remove(id);
-		return "success";
+		return "delete success";
 	}
 
 }
