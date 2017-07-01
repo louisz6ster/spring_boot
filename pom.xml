@@ -65,6 +65,12 @@
 			<artifactId>postgresql</artifactId>
 			<version>9.4-1206-jdbc42</version>
 		</dependency>
+		<!-- 加解密套件 -->
+		<dependency>
+			<groupId>com.github.ulisesbocchio</groupId>
+			<artifactId>jasypt-spring-boot-starter</artifactId>
+			<version>1.12</version>
+		</dependency>
 		<!-- example 5 end -->
 	</dependencies>
 	<!-- <reporting> <plugins> <plugin> <groupId>org.apache.maven.plugins</groupId> 

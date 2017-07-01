@@ -2,13 +2,15 @@ package louisz.springboot.example5;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.PropertySource;
 
 /**
- * Louisz Spring boot introduce ex.3
+ * Louisz Spring boot introduce ex.5
  *
  */
 
 @SpringBootApplication
+@PropertySource(name = "EncryptedProperties", value = "classpath:example5.properties")
 public class Example5 {
 	/**
 	 * 程式執行起點

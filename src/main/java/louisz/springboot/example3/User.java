@@ -10,7 +10,7 @@ public class User {
 	@ApiModelProperty(notes = "使用者emai", required = true)
 	private String email;
 	@ApiModelProperty(notes = "使用者手機號碼")
-	private String mobileNumber;
+	private String mobilenumber;
 
 	public Long getId() {
 		return id;
@@ -36,12 +36,14 @@ public class User {
 		this.email = email;
 	}
 
-	public String getMobileNumber() {
-		return mobileNumber;
+	public String getMobilenumber() {
+		return mobilenumber;
 	}
 
-	public void setMobileNumber(String mobileNumber) {
-		this.mobileNumber = mobileNumber;
+	public void setMobilenumber(String mobilenumber) {
+		this.mobilenumber = mobilenumber;
 	}
+
+	
 
 }
