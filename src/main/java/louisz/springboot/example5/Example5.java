@@ -10,7 +10,7 @@ import org.springframework.context.annotation.PropertySource;
  */
 
 @SpringBootApplication
-@PropertySource(name = "EncryptedProperties", value = "classpath:example5.properties")
+@PropertySource(name = "EncryptedProperties", value = "classpath:example5.properties")//針對需加解密的設定檔檔名及位置
 public class Example5 {
 	/**
 	 * 程式執行起點
