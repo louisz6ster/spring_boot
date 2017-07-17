@@ -8,7 +8,7 @@ public interface UserService {
 	/**
 	 * 新增一筆User資料
 	 * 
-	 * @param User
+	 * @param Member
 	 */
 	void merge(User user);
 
