@@ -17,6 +17,7 @@ public class Member {
     @Setter @Getter
     private Long id;
     @Column(nullable = false)
+    @Setter @Getter
     private String name;
     @Column(nullable = false)
     @Setter @Getter
