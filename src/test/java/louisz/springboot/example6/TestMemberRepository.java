@@ -51,6 +51,10 @@ public class TestMemberRepository {
 		memberRepository.delete(memberRepository.findById(1l));
 		// 確認刪除資料筆數
 		Assert.assertEquals(0, memberRepository.findAll().size());
+		// 再度儲存
+		memberRepository.save(m);
+		// 查詢姓名為jessie的筆數
+		Assert.assertEquals(1, memberRepository.countByName("jessie").longValue());
 	}
 
 }
