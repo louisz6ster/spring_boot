@@ -9,8 +9,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import louisz.springboot.example3.User;
-
 //spring boot 1.4以後的方式
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
@@ -55,6 +53,9 @@ public class TestMemberRepository {
 		memberRepository.save(m);
 		// 查詢姓名為jessie的筆數
 		Assert.assertEquals(1, memberRepository.countByName("jessie").longValue());
+		// 不分大小寫查詢姓名
+		Assert.assertEquals(0, memberRepository.countByName("JESSIE").longValue());
+		Assert.assertEquals(1, memberRepository.findByNameIgnoreCase("JESSIE").size());
 	}
 
 }
