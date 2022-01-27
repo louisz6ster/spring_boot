@@ -69,7 +69,7 @@
 		<dependency>
 			<groupId>com.github.ulisesbocchio</groupId>
 			<artifactId>jasypt-spring-boot-starter</artifactId>
-			<version>1.12</version>
+			<version>1.18</version>
 		</dependency>
 		<!-- example 5 end -->
 		<!-- example 6 start -->
